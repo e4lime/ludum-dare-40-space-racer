@@ -14,7 +14,7 @@ EditorSettings:
   m_EtcTextureNormalCompressor: 2
   m_EtcTextureBestCompressor: 4
   m_ProjectGenerationIncludedExtensions: txt;xml;fnt;cd
-  m_ProjectGenerationRootNamespace: SET_ROOT_NAMESPACE_IN_UNITY_SETTINGS_EDITOR
+  m_ProjectGenerationRootNamespace: E4lime.LudumDare.Ld40
   m_UserGeneratedProjectSuffix: 
   m_CollabEditorSettings:
     inProgressEnabled: 1
