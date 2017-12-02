@@ -1,8 +1,30 @@
 # Space-Racer
 
 ## Summary
-
+Space Racer! The more points you get the harder it gets.
 ## GDD
+* Endless space racer on 3 lanes.
+* The more lives you have the less points you get over time
+* The more points you get the harder it gets
+* Goal is to stay alive and gain as many points as possible
+* Obstacles removes lives
+* Game over when health reaches 0
+* It should be rewarding to stay close to 1 health
+* Bonus (if time): Avoid bugs! More bugs you get the harder it gets, a bug can be ship starts spinning, controls flips, camera changes fov etc 
+
+### Controls
+Two types of controls:
+Snappy:
+* Hold left to snap to left lane
+* Hold right to snap to right lane
+* Release keys to snap to middle line
+
+Easy:
+* Press left to snap to a lane to the left
+* Press right to snap to a lane to the right
+
+### Outlines
+![Gameplay](/notes/gameplay-outline_01.png "Gameplay")
 
 
 
