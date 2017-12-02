@@ -27,6 +27,28 @@ Easy:
 ![Gameplay](/notes/gameplay-outline_01.png "Gameplay")
 
 
+## TODO
+- [ ] 3 lanes
+- [ ] endless
+- [ ] bent world shader
+- [ ] snap to world
+- [ ] ship forward movement
+- [ ] ship horizontal movement, left moves left a lane and vice versa
+- [ ] health
+- [ ] score
+- [ ] main menu
+- [ ] pause menu
+- [ ] obstacles
+- [ ] start countdown or some sequence
+
+### Optional
+- [ ] Jump
+- [ ] Second controll, hold left for left lane and right for right lane
+- [ ] online highscore
+- [ ] bugs
+- [ ] more health = more bugs
+- [ ] slow motion when hitting bugs
+
 
 
 ## IMPORTANT Checklist
