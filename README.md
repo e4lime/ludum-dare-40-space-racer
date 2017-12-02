@@ -39,6 +39,9 @@ Easy:
 - [ ] main menu
 - [ ] pause menu
 - [ ] obstacles
+- [ ] obstacle spawner
+- [ ] health objects
+- [ ] health spawner
 - [ ] start countdown or some sequence
 
 ### Optional
