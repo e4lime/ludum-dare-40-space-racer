@@ -43,6 +43,7 @@ Easy:
 - [ ] health objects
 - [ ] health spawner
 - [ ] start countdown or some sequence
+- [ ] Camera follow ship
 
 ### Optional
 - [ ] Jump
