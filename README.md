@@ -29,8 +29,8 @@ Easy:
 
 ## TODO
 - [x] 3 lanes
-- [ ] endless
-- [ ] bent world shader
+- [x] endless
+- [x] bent world shader
 - [ ] snap to world (... forgot what I meant here)
 - [x] ship forward movement
 - [x] ship horizontal movement, left moves left a lane and vice versa
