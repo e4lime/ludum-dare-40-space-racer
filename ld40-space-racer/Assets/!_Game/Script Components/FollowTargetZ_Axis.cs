@@ -10,7 +10,7 @@ namespace E4lime.LudumDare.Ld40.Components {
 		private Rigidbody m_TargetToFollow;
 
 		[SerializeField]
-		private float m_Damp = 0.3f;
+		private float m_Damp = 0.1f;
 
 		private Transform m_Transform;
 		private Vector3 m_Offset;
@@ -21,9 +21,9 @@ namespace E4lime.LudumDare.Ld40.Components {
 			m_Offset = m_Transform.position - m_TargetToFollow.transform.position;
 		}
 
-		private void LateUpdate() {
+		private void FixedUpdate() {
 			Vector3 targetPos = new Vector3(m_Transform.position.x, m_Transform.position.y, m_TargetToFollow.position.z + m_Offset.z );
-			m_Transform.position = Vector3.SmoothDamp(m_Transform.position, targetPos, ref m_Velocity, m_Damp);
+			m_Transform.position = targetPos;
 		}
 	}
 }
