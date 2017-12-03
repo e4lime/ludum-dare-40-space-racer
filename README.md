@@ -28,12 +28,12 @@ Easy:
 
 
 ## TODO
-- [ ] 3 lanes
+- [x] 3 lanes
 - [ ] endless
 - [ ] bent world shader
-- [ ] snap to world
-- [ ] ship forward movement
-- [ ] ship horizontal movement, left moves left a lane and vice versa
+- [ ] snap to world (... forgot what I meant here)
+- [x] ship forward movement
+- [x] ship horizontal movement, left moves left a lane and vice versa
 - [ ] health
 - [ ] score
 - [ ] main menu
@@ -43,7 +43,7 @@ Easy:
 - [ ] health objects
 - [ ] health spawner
 - [ ] start countdown or some sequence
-- [ ] Camera follow ship
+- [x] Camera follow ship
 
 ### Optional
 - [ ] Jump
