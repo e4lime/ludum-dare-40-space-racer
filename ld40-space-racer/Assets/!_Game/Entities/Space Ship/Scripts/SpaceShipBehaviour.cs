@@ -3,8 +3,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using E4lime.LudumDare.Ld40.Lanes;
+
 namespace E4lime.LudumDare.Ld40.SpaceShip {
 	public class SpaceShipBehaviour : MonoBehaviour {
+
+		[SerializeField]
+		private LanesManager m_LanesManager;
 
 		[SerializeField]
 		private Transform m_GroundRaycasterOrigin;
@@ -19,19 +24,13 @@ namespace E4lime.LudumDare.Ld40.SpaceShip {
 		private Transform m_Transform;
 
 		private Vector3 m_NextPosition;
+
+
 		void Awake(){
 			m_Rigidbody = GetComponent<Rigidbody>();
 			m_Transform = transform;
 			m_NextPosition = m_Transform.position;
-		}
-
-		void Start() { 
-		}
-
-
-		void Update() {
-			float hori = Input.GetAxis("Horizontal");
-			
+			m_LanesManager = FindObjectOfType<LanesManager>();
 		}
 
 		void FixedUpdate() {
@@ -52,11 +51,11 @@ namespace E4lime.LudumDare.Ld40.SpaceShip {
 		}
 
 		public void MoveLeft() {
-
+			m_LanesManager.GetLeftLane();
 		}
 
 		public void MoveRight() {
-
+			m_LanesManager.GetRightLane();
 		}
 	}
 }

@@ -19,11 +19,11 @@ namespace E4lime.LudumDare.Ld40.SpaceShip {
 
 		private void Update() {
 		
-			if (Input.GetButton("MoveLeft")) {
+			if (Input.GetButtonDown("MoveLeft")) {
 				m_SpaceShipBehaviour.MoveLeft();
 			}
 
-			 if (Input.GetButton("MoveRight")) {
+			 if (Input.GetButtonDown("MoveRight")) {
 				m_SpaceShipBehaviour.MoveRight();
 			}
 		}

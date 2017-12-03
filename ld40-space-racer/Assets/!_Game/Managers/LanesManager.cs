@@ -19,7 +19,7 @@ namespace E4lime.LudumDare.Ld40.Lanes {
 				m_CurrentLaneIndex = 0;
 				return null;
 			}
-
+	
 			return m_Lanes[m_CurrentLaneIndex];
 		}
 
@@ -30,7 +30,7 @@ namespace E4lime.LudumDare.Ld40.Lanes {
 				m_CurrentLaneIndex = m_Lanes.Length-1;
 				return null;
 			}
-
+		
 			return m_Lanes[m_CurrentLaneIndex];
 		}
 
