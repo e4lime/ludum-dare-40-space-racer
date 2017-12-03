@@ -6,9 +6,9 @@
 /Assets/TextMesh Pro/
 
 #DOTween
-/Assets/Demigiant/
-/Assets/Demigiant/DemiLib/
-/Assets/Demigiant/DOTween/
+!/Assets/Demigiant/
+!/Assets/Demigiant/DemiLib/
+!/Assets/Demigiant/DOTween/
 
 #DOTweenPro
 /Assets/Demigiant/DOTweenPro/
