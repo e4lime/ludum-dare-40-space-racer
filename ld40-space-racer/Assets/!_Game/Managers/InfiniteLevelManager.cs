@@ -47,7 +47,7 @@ namespace E4lime.LudumDare.Ld40.InfiniteLevel {
 
 
 		private void CreateChunk() {
-			LevelChunk chunk = Instantiate(m_LevelChunks[0], createNextVector3(), Quaternion.identity, m_Transform);
+			LevelChunk chunk = Instantiate(m_LevelChunks[Random.Range(0, m_LevelChunks.Length)], createNextVector3(), Quaternion.identity, m_Transform);
 			m_LastCreatedChunkLength = chunk.GetZLength();
 			m_CurrentlyLoadedChunks++;
 			m_TotalCreatedChunks++;

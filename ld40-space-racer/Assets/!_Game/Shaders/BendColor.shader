@@ -1,16 +1,21 @@
-﻿Shader "e4lime/Bend" {
-	Properties {
-		_MainTex ("Texture", 2D) = "white" {}
+﻿Shader "e4lime/BendColor"
+{
+	Properties
+	{
+		_Color ("Main Color", Color) = (1,1,1,1)
 		_Bend("Bend", Float) = 0.001
 	}
-	SubShader {
+	SubShader
+	{
 		Tags { "RenderType"="Opaque" }
-		LOD 200
+		LOD 100
 
 		CGPROGRAM
 		#pragma surface surf Lambert vertex:vert addshadow
+
 		uniform sampler2D _MainTex;
 		uniform float _Bend;
+		fixed4 _Color;
 		
 		struct Input {
 			float2 uv_MainTex;
@@ -25,12 +30,10 @@
 		}
 
 		void surf(Input IN, inout SurfaceOutput o) {
-			half4 c = tex2D(_MainTex, IN.uv_MainTex);
-			o.Albedo = c.rbg;
-			o.Alpha = c.a;
+			o.Albedo = _Color.rgb;
+			o.Alpha = _Color.a;
 		}
 
 		ENDCG
 	}
-	FallBack "Mobile/Diffuse"
 }
