@@ -7,7 +7,7 @@ namespace E4lime.LudumDare.Ld40.InfiniteLevel {
 	public class LevelChunk : MonoBehaviour {
 		
 		[SerializeField]
-		private bool m_Foo = true;
+		private float m_ZLengthOfChunk = 10f;
 
 		private Rigidbody m_Rigidbody;
 		private Transform m_Transform;
@@ -17,7 +17,10 @@ namespace E4lime.LudumDare.Ld40.InfiniteLevel {
 			m_Transform = transform;
 		}
 
-		void Start() { 
+
+
+		public float GetZLength() {
+			return m_ZLengthOfChunk;
 		}
 	}
 }
