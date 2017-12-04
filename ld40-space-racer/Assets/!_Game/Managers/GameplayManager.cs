@@ -27,6 +27,4 @@ namespace E4lime.LudumDare.Ld40 {
 			Destroy(this.m_SpaceShipBehaviour.gameObject);
 		}
 	}
-
-	
 }
