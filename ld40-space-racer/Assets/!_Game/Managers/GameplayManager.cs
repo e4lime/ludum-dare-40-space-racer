@@ -19,6 +19,12 @@ namespace E4lime.LudumDare.Ld40 {
 		private ObjectSpawner m_ObjectSpawner;
 		private State m_State;
 
+		[SerializeField,Range (0, 100)]
+		private float m_SpaceShipMaximumSpeed = 70;
+		[SerializeField, Range(0, 100)]
+		private float m_SpaceShipMinimumSpeed = 5;
+
+
 		public enum State {
 			Running,
 			GameOver
@@ -64,6 +70,8 @@ namespace E4lime.LudumDare.Ld40 {
 
 		void Update() {
 			if (CurrentState == State.Running) {
+				AdjustDifficulty();
+
 				if (m_PlayerHealth.HealthValue <= 0) {
 					CurrentState = State.GameOver;
 				}
@@ -71,6 +79,10 @@ namespace E4lime.LudumDare.Ld40 {
 		}
 
 
+		void AdjustDifficulty() {
+			float correctedSpeed = Mathf.Lerp(m_SpaceShipMaximumSpeed, m_SpaceShipMinimumSpeed, m_PlayerHealth.HealthValue/100);
+			m_SpaceShipBehaviour.SetMaxSpeed(correctedSpeed);
+		}
 
 		private void GameOver() {
 

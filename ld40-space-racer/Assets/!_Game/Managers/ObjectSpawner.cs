@@ -66,6 +66,10 @@ namespace E4lime.LudumDare.Ld40.Level {
 		}
 
 
+		private void BeginningSpawnProcess() {
+
+		}
+
 		private void SpawnProcess() {
 
 			if (m_LastSpawnedPosition.z < m_SpaceShipBehaviourTransform.position.z + m_SpawnDistanceFromShip - m_MinSpawnInterval) {

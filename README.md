@@ -9,6 +9,8 @@ The more health you have the slower you move, lower the faster.
 Obstacles drain health, some drain 1 
 
 
+BUGG:
+Health stops spawning sometimes
 
 ## GDD
 * Endless space racer on 3 lanes.

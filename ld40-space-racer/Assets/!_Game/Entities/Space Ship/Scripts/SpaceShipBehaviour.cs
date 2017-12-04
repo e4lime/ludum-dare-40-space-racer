@@ -56,6 +56,10 @@ namespace E4lime.LudumDare.Ld40.SpaceShip {
 			m_Rigidbody.MovePosition(m_NextPosition);
 		}
 
+		public void SetMaxSpeed(float maxSpeed) {
+			m_MaxSpeed = maxSpeed;
+		}
+
 		private void MoveForward() {
 			Vector3 currentShipPosition = m_Rigidbody.transform.position;
 
