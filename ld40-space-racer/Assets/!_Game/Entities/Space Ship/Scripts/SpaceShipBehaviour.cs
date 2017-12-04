@@ -17,9 +17,6 @@ namespace E4lime.LudumDare.Ld40.SpaceShip {
 		[SerializeField]
 		private float m_MaxSpeed = 2f;
 
-		[SerializeField]
-		private float m_DistanceToGround = 0.5f;
-
 
 		[Header("Horizontal Tween"),SerializeField]
 		private float m_HoriTweenDuration = 1f;

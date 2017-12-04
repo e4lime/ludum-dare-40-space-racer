@@ -13,11 +13,12 @@ namespace E4lime.LudumDare.Ld40.GUI {
 		private Text m_HealthDisplay;
 
 		private Health m_PlayerHealth;
-
+		private GameplayManager m_GameplayManager;
 
 
 		void Awake(){
 			m_PlayerHealth = FindObjectOfType<SpaceShipBehaviour>().GetComponent<Health>();
+			m_GameplayManager = FindObjectOfType<GameplayManager>();
 		}
 
 		private void OnGUI() {

@@ -9,14 +9,11 @@ namespace E4lime.LudumDare.Ld40.Level {
 	public class Obstacle : MonoBehaviour {
 
 
-		private Rigidbody m_Rigidbody;
-		private Transform m_Transform;
 
 		private Health m_HealthToAddOnHit;
 
 		void Awake(){
-			m_Rigidbody = GetComponent<Rigidbody>();
-			m_Transform = transform;
+
 			m_HealthToAddOnHit = GetComponent<Health>();
 		}
 

@@ -9,9 +9,6 @@ namespace E4lime.LudumDare.Ld40.Components {
 		[SerializeField]
 		private Rigidbody m_TargetToFollow;
 
-		[SerializeField]
-		private float m_Damp = 0.1f;
-
 		private Transform m_Transform;
 		private Vector3 m_Offset;
 

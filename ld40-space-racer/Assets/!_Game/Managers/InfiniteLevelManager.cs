@@ -12,6 +12,9 @@ namespace E4lime.LudumDare.Ld40.InfiniteLevel {
 		[SerializeField]
 		private int m_MaxLoadedChunks = 10;
 
+		[SerializeField]
+		private Transform[] m_GoalChunk;
+
 		private Transform m_Transform;
 		private Transform m_SpaceShipBehaviourTransform;
 		private GameplayManager m_GameplayManager;
@@ -51,7 +54,7 @@ namespace E4lime.LudumDare.Ld40.InfiniteLevel {
 			}
 		}
 
-
+		
 
 		private void CreateChunk() {
 			LevelChunk chunk = Instantiate(m_LevelChunks[Random.Range(0, m_LevelChunks.Length)], createNextVector3(), Quaternion.identity, m_Transform);

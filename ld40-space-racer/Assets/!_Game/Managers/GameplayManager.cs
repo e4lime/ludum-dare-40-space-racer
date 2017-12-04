@@ -14,6 +14,7 @@ namespace E4lime.LudumDare.Ld40 {
 	
 
 		private SpaceShipBehaviour m_SpaceShipBehaviour;
+		private Transform m_SpaceShipBehaviourTransform;
 		private Health m_PlayerHealth;
 		private InfiniteLevelManager m_InfiniteLevelManager;
 		private ObjectSpawner m_ObjectSpawner;
@@ -23,6 +24,8 @@ namespace E4lime.LudumDare.Ld40 {
 		private float m_SpaceShipMaximumSpeed = 70;
 		[SerializeField, Range(0, 100)]
 		private float m_SpaceShipMinimumSpeed = 5;
+
+		private Vector3 m_SpaceShipStartLocation;
 
 
 		public enum State {
@@ -62,10 +65,15 @@ namespace E4lime.LudumDare.Ld40 {
 		void Awake(){
 			m_SpaceShipBehaviour = FindObjectOfType<SpaceShipBehaviour>();
 			m_PlayerHealth = m_SpaceShipBehaviour.GetComponent<Health>();
+			m_SpaceShipBehaviourTransform = m_SpaceShipBehaviour.transform;
 			m_InfiniteLevelManager = FindObjectOfType<InfiniteLevelManager>();
 			m_ObjectSpawner = FindObjectOfType<ObjectSpawner>();
 
 			m_State = State.Running;
+		}
+
+		private void Start() {
+			m_SpaceShipStartLocation = m_SpaceShipBehaviour.transform.position;
 		}
 
 		void Update() {
@@ -78,8 +86,11 @@ namespace E4lime.LudumDare.Ld40 {
 			}
 		}
 
+		public float DistanceTravelled() {
+			return m_SpaceShipBehaviourTransform.position.z - m_SpaceShipStartLocation.z;
+		}
 
-		void AdjustDifficulty() {
+		private void AdjustDifficulty() {
 			float correctedSpeed = Mathf.Lerp(m_SpaceShipMaximumSpeed, m_SpaceShipMinimumSpeed, m_PlayerHealth.HealthValue/100);
 			m_SpaceShipBehaviour.SetMaxSpeed(correctedSpeed);
 		}
