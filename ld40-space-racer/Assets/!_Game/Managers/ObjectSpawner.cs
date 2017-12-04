@@ -106,7 +106,7 @@ namespace E4lime.LudumDare.Ld40.Level {
 			Vector3 lane;
 			Vector3 spawnPos;
 
-			// Avoid spawning on same column when multiple spawnes on one row
+			// Avoid spawning on same column when multiple spawns on one row
 			do {
 				lane  = m_LanePositions[Random.Range(0, m_LanePositions.Length)];
 				spawnPos   = new Vector3(lane.x, lane.y, m_SpaceShipBehaviourTransform.position.z + m_SpawnDistanceFromShip);
