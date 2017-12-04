@@ -14,15 +14,19 @@ namespace E4lime.LudumDare.Ld40.InfiniteLevel {
 
 		private Transform m_Transform;
 		private Transform m_SpaceShipBehaviourTransform;
+		private GameplayManager m_GameplayManager;
 
 		private float m_NextChunkPositionZ;
 		private float m_LastCreatedChunkLength = 0;
 		private int m_CurrentlyLoadedChunks = 0;
 		private int m_TotalCreatedChunks = 0;
 
+		public bool PauseProcess {get; set;}
+
 		void Awake(){
 			m_Transform = transform;
 			m_SpaceShipBehaviourTransform = FindObjectOfType<SpaceShipBehaviour>().transform;
+			m_GameplayManager = FindObjectOfType<GameplayManager>();
 			m_NextChunkPositionZ = 0;
 		}
 
@@ -33,6 +37,9 @@ namespace E4lime.LudumDare.Ld40.InfiniteLevel {
 		}
 
 		private void Update() {
+			
+			if (PauseProcess) return;
+
 			LevelChunk chunk = m_Transform.GetChild(0).GetComponent<LevelChunk>();
 			
 			if (m_SpaceShipBehaviourTransform.position.z > chunk.transform.position.z + (chunk.GetZLength() * 2)) {

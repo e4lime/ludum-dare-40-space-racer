@@ -22,8 +22,10 @@ namespace E4lime.LudumDare.Ld40.Components {
 		}
 
 		private void FixedUpdate() {
-			Vector3 targetPos = new Vector3(m_Transform.position.x, m_Transform.position.y, m_TargetToFollow.position.z + m_Offset.z );
-			m_Transform.position = targetPos;
+			if (m_TargetToFollow != null) {
+				Vector3 targetPos = new Vector3(m_Transform.position.x, m_Transform.position.y, m_TargetToFollow.position.z + m_Offset.z);
+				m_Transform.position = targetPos;
+			}
 		}
 	}
 }

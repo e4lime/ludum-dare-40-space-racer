@@ -45,6 +45,9 @@ namespace E4lime.LudumDare.Ld40.Level {
 		private int m_SpawnsSinceLastIncrease = 0;
 		private int m_NextHealthSpawn = -1;
 
+		public bool PauseProcess { get; set; }
+
+
 		void Awake(){
 			m_Transform = transform;
 			m_SpawnedObjects = new Queue<Transform>();
@@ -57,6 +60,7 @@ namespace E4lime.LudumDare.Ld40.Level {
 		}
 
 		private void Update() {
+			if (PauseProcess) return;
 			SpawnProcess();
 			DeSpawnProcess();
 		}
@@ -67,10 +71,8 @@ namespace E4lime.LudumDare.Ld40.Level {
 			if (m_LastSpawnedPosition.z < m_SpaceShipBehaviourTransform.position.z + m_SpawnDistanceFromShip - m_MinSpawnInterval) {
 				Spawn(m_DecreaseHealthObstacle);
 				m_SpawnsSinceLastIncrease++;
-				Debug.Log(m_NextHealthSpawn + " " + m_SpawnsSinceLastIncrease + " " + m_MinDecreaseObstaclesBeforeIncrease);
 				if (m_SpawnsSinceLastIncrease >= m_MinDecreaseObstaclesBeforeIncrease && m_NextHealthSpawn == -1) {
 					m_NextHealthSpawn = Random.Range(m_SpawnIncreaseHealthRandomRangeStart, m_SpawnIncreaseHealthRandomRangEnd);
-					Debug.Log(m_NextHealthSpawn);
 				}
 				else if ( m_NextHealthSpawn != -1 && m_SpawnsSinceLastIncrease == m_MinDecreaseObstaclesBeforeIncrease + m_NextHealthSpawn) {
 					Spawn(m_IncreaseHealthObstacle);

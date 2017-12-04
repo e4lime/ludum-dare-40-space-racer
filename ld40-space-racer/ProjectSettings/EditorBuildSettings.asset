@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/!_Game/Scenes/levels/InfiniteLevel.unity
+    guid: 2e0ed3ab9ed8562438b20dee460fff85

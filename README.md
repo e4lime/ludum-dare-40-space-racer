@@ -48,8 +48,8 @@ Easy:
 - [ ] pause menu
 - [x] obstacles
 - [x] obstacle spawner
-- [ ] health objects
-- [ ] health spawner
+- [x] health objects
+- [x] health spawner
 - [ ] start countdown or some sequence
 - [x] Camera follow ship
 
