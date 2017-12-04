@@ -26,6 +26,9 @@
 #for Unity 2017_0.2
 #https://github.com/github/gitignore/blob/master/Unity.gitignore 
 
+# Database codes
+/Assets/!_Game/Managers/HighscoreCodes.cs
+
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
