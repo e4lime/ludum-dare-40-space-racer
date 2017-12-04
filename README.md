@@ -41,13 +41,12 @@ Easy:
 - [x] 3 lanes
 - [x] endless
 - [x] bent world shader
-- [ ] snap to world (... forgot what I meant here)
+
 - [x] ship forward movement
 - [x] ship horizontal movement, left moves left a lane and vice versa
 - [x] health
-- [ ] score
+
 - [ ] main menu
-- [ ] pause menu
 - [x] obstacles
 - [x] obstacle spawner
 - [x] health objects
@@ -56,14 +55,25 @@ Easy:
 - [x] Camera follow ship
 
 ### Optional
-- [ ] Jump
-- [ ] Second controll, hold left for left lane and right for right lane
 - [ ] online highscore
+
+### Sounds
+- [ ] Hit decrease obstacle
+- [ ] Hit increase obstacle
+- [ ] Goal
+
+
+### Skip
+- [ ] score 
+- [ ] snap to world (... forgot what I meant here)
+
+Optional
+- [ ] pause menu
 - [ ] bugs
 - [ ] more health = more bugs
 - [ ] slow motion when hitting bugs
-
-
+- [ ] Jump
+- [ ] Second control, hold left for left lane and right for right lane
 
 ## IMPORTANT Checklist
 ### In the beginning
