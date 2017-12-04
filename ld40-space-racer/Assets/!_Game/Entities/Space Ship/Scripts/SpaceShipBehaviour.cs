@@ -65,11 +65,11 @@ namespace E4lime.LudumDare.Ld40.SpaceShip {
 		}
 
 		public void MoveLeft() {
-			MoveHorizontalTo(m_LanesManager.GetLeftLane());
+			MoveHorizontalTo(m_LanesManager.MoveOneToLeft());
 		}
 
 		public void MoveRight() {
-			MoveHorizontalTo(m_LanesManager.GetRightLane());
+			MoveHorizontalTo(m_LanesManager.MoveOneToRight());
 		}
 
 		

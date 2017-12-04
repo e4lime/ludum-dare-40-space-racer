@@ -13,7 +13,7 @@ namespace E4lime.LudumDare.Ld40.Lanes {
 			m_CurrentLaneIndex = 1;
 		}
 
-		public Transform GetLeftLane() {
+		public Transform MoveOneToLeft() {
 			--m_CurrentLaneIndex;
 			if (m_CurrentLaneIndex < 0) {
 				m_CurrentLaneIndex = 0;
@@ -23,7 +23,7 @@ namespace E4lime.LudumDare.Ld40.Lanes {
 			return m_Lanes[m_CurrentLaneIndex];
 		}
 
-		public Transform GetRightLane() {
+		public Transform MoveOneToRight() {
 			
 			++m_CurrentLaneIndex;
 			if (m_CurrentLaneIndex >= m_Lanes.Length) {
@@ -34,5 +34,12 @@ namespace E4lime.LudumDare.Ld40.Lanes {
 			return m_Lanes[m_CurrentLaneIndex];
 		}
 
+		public Vector3[] GetLanePositions() {
+			Vector3[] vectors = new Vector3[m_Lanes.Length];
+			for (int i = 0; i < m_Lanes.Length; ++i) {
+				vectors[i] = m_Lanes[i].position;
+			}
+			return vectors;
+		}
 	}
 }
