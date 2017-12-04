@@ -32,7 +32,7 @@ namespace E4lime.LudumDare.Ld40.Level {
 
 		private void HitPlayer(SpaceShipBehaviour player) {
 			Health playerHealth = player.GetComponent<Health>();
-			playerHealth.DecreaseHealth(m_HealthToAddOnHit.HealthValue);
+			playerHealth.HealthValue += m_HealthToAddOnHit.HealthValue;
 			Destroy(this.gameObject);
 		}
 	}

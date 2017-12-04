@@ -42,12 +42,12 @@ Easy:
 - [ ] snap to world (... forgot what I meant here)
 - [x] ship forward movement
 - [x] ship horizontal movement, left moves left a lane and vice versa
-- [ ] health
+- [x] health
 - [ ] score
 - [ ] main menu
 - [ ] pause menu
-- [ ] obstacles
-- [ ] obstacle spawner
+- [x] obstacles
+- [x] obstacle spawner
 - [ ] health objects
 - [ ] health spawner
 - [ ] start countdown or some sequence

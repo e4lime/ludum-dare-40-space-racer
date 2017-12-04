@@ -13,10 +13,5 @@ namespace E4lime.LudumDare.Ld40.Components {
 			get { return m_Health; }
 			set { m_Health = value; }
 		}
-
-		public float DecreaseHealth(float value) {
-			m_Health -= value;
-			return m_Health;
-		}
 	}
 }
