@@ -872,6 +872,46 @@ Transform:
   m_Father: {fileID: 1652901085}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &602252147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 602252148}
+  - component: {fileID: 602252149}
+  m_Layer: 0
+  m_Name: Gameplay Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &602252148
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 602252147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2063984958}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &602252149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 602252147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e249de9958ba1b499f99c50274c32d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &603283033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,6 +1836,7 @@ GameObject:
   - component: {fileID: 1216949938}
   - component: {fileID: 1216949945}
   - component: {fileID: 1216949940}
+  - component: {fileID: 1216949941}
   m_Layer: 0
   m_Name: Spaceship
   m_TagString: Player
@@ -1848,6 +1889,18 @@ MonoBehaviour:
   m_ObstacleToLaunch: {fileID: 4449530600397640, guid: ffa0187d58174714d88ecc7b464a4c5f,
     type: 2}
   m_InstantiatedObjects: {fileID: 769177010}
+--- !u!114 &1216949941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1216949937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb0959dd2a9acd4aae3a442c4b17ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Health: 100
 --- !u!65 &1216949942
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2931,6 +2984,7 @@ Transform:
   - {fileID: 724124036}
   - {fileID: 534048861}
   - {fileID: 1851691096}
+  - {fileID: 602252148}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
