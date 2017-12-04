@@ -7,11 +7,21 @@ using E4lime.LudumDare.Ld40.Components;
 using E4lime.LudumDare.Ld40.InfiniteLevel;
 using E4lime.LudumDare.Ld40.Level;
 using UnityEngine.SceneManagement;
+using System;
 
 namespace E4lime.LudumDare.Ld40 {
 	public class GameplayManager : MonoBehaviour {
 		
 	
+
+	
+
+
+		[SerializeField,Range (0, 100)]
+		private float m_SpaceShipMaximumSpeed = 70;
+		[SerializeField, Range(0, 100)]
+		private float m_SpaceShipMinimumSpeed = 5;
+
 
 		private SpaceShipBehaviour m_SpaceShipBehaviour;
 		private Transform m_SpaceShipBehaviourTransform;
@@ -20,18 +30,19 @@ namespace E4lime.LudumDare.Ld40 {
 		private ObjectSpawner m_ObjectSpawner;
 		private State m_State;
 
-		[SerializeField,Range (0, 100)]
-		private float m_SpaceShipMaximumSpeed = 70;
-		[SerializeField, Range(0, 100)]
-		private float m_SpaceShipMinimumSpeed = 5;
-
 		private Vector3 m_SpaceShipStartLocation;
+		private bool m_PlayerReachedGoal = false;
+
+		public float TimeTaken { get; set; }
 
 
 		public enum State {
 			Running,
-			GameOver
+			GameOver,
+			EndScreen
 		}
+
+
 
 		public State CurrentState {
 			get { return m_State; }
@@ -45,8 +56,11 @@ namespace E4lime.LudumDare.Ld40 {
 							case State.GameOver:
 								GameOver();
 								break;
+							case State.EndScreen:
+								ShowHighscore();
+								break;
 						}
-						break;
+					break;
 					case State.GameOver:
 						switch (value) {
 							case State.Running:
@@ -55,11 +69,35 @@ namespace E4lime.LudumDare.Ld40 {
 							case State.GameOver:
 
 								break;
+							case State.EndScreen:
+
+								break;
 						}
-						break;
+					break;
+					case State.EndScreen:
+						switch (value) {
+							case State.Running:
+
+								break;
+							case State.GameOver:
+
+								break;
+							case State.EndScreen:
+
+								break;
+						}
+					break;
 				}
 				m_State = value;
 			}
+		}
+
+		private void ShowHighscore() {
+		
+		}
+
+		public void PlayerReachedGoal() {
+			m_PlayerReachedGoal = true;
 		}
 
 		void Awake(){
@@ -74,14 +112,21 @@ namespace E4lime.LudumDare.Ld40 {
 
 		private void Start() {
 			m_SpaceShipStartLocation = m_SpaceShipBehaviour.transform.position;
+			TimeTaken = 0;
 		}
 
 		void Update() {
 			if (CurrentState == State.Running) {
-				AdjustDifficulty();
+				TimeTaken += Time.deltaTime;
 
-				if (m_PlayerHealth.HealthValue <= 0) {
+				if (m_PlayerReachedGoal) {
+					CurrentState = State.EndScreen;
+				}
+				else if (m_PlayerHealth.HealthValue <= 0) {
 					CurrentState = State.GameOver;
+				}
+				else {
+					AdjustDifficulty();
 				}
 			}
 		}

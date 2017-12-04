@@ -30,6 +30,7 @@ namespace E4lime.LudumDare.Ld40.SpaceShip {
 		
 
 		private LanesManager m_LanesManager;
+		private GameplayManager m_GameplayManager;
 
 		private Vector3 m_NextPosition;
 
@@ -39,8 +40,10 @@ namespace E4lime.LudumDare.Ld40.SpaceShip {
 			
 			m_Transform = transform;
 			m_LanesManager = FindObjectOfType<LanesManager>();
+			m_GameplayManager = FindObjectOfType<GameplayManager>();
 
 			m_NextPosition = m_Transform.position;
+
 
 		}
 
@@ -52,6 +55,14 @@ namespace E4lime.LudumDare.Ld40.SpaceShip {
 
 			m_Rigidbody.MovePosition(m_NextPosition);
 		}
+
+		private void OnTriggerEnter(Collider other) {
+			if (other.CompareTag("Goal")) {
+				m_GameplayManager.PlayerReachedGoal();
+			}
+		}
+
+
 
 		public void SetMaxSpeed(float maxSpeed) {
 			m_MaxSpeed = maxSpeed;

@@ -5,12 +5,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 namespace E4lime.LudumDare.Ld40.GUI {
 	public class GUIManager : MonoBehaviour {
 
 		[SerializeField]
 		private Text m_HealthDisplay;
+
+		[SerializeField]
+		private Text m_TimerDisplay;
 
 		private Health m_PlayerHealth;
 		private GameplayManager m_GameplayManager;
@@ -23,6 +27,13 @@ namespace E4lime.LudumDare.Ld40.GUI {
 
 		private void OnGUI() {
 			UpdateHealth();
+			UpdateTimer();
+
+		}
+
+		private void UpdateTimer() {
+			m_TimerDisplay.text = string.Format("{0:#,0.000}", m_GameplayManager.TimeTaken);
+			
 		}
 
 		private void UpdateHealth() {
