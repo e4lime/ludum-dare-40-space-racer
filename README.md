@@ -2,6 +2,14 @@
 
 ## Summary
 Space Racer! The more points you get the harder it gets.
+
+v2:
+The more health you have the slower you move, lower the faster. 
+100 total health
+Obstacles drain health, some drain 1 
+
+
+
 ## GDD
 * Endless space racer on 3 lanes.
 * The more lives you have the less points you get over time
