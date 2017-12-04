@@ -32,10 +32,8 @@ namespace E4lime.LudumDare.Ld40.Level {
 		[SerializeField]
 		private int m_SpawnIncreaseHealthRandomRangEnd = 15;
 
-		private Rigidbody m_Rigidbody;
-		private Transform m_Transform;
 
-		
+		private Transform m_Transform;
 
 		private LanesManager m_LanesManager;
 		private Transform m_SpaceShipBehaviourTransform;
@@ -48,7 +46,6 @@ namespace E4lime.LudumDare.Ld40.Level {
 		private int m_NextHealthSpawn = -1;
 
 		void Awake(){
-			m_Rigidbody = GetComponent<Rigidbody>();
 			m_Transform = transform;
 			m_SpawnedObjects = new Queue<Transform>();
 			m_LanesManager = FindObjectOfType<LanesManager>();
