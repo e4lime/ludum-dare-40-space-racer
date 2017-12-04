@@ -28,7 +28,6 @@ namespace E4lime.LudumDare.Ld40.GUI {
 		private void OnGUI() {
 			UpdateHealth();
 			UpdateTimer();
-
 		}
 
 		private void UpdateTimer() {
