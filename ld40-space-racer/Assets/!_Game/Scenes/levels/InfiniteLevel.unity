@@ -295,7 +295,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 265776083}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 435.5, y: 245, z: 0}
+  m_LocalPosition: {x: 313.5, y: 116.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 464927081}
@@ -430,7 +430,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 464927078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 228.4, z: 0}
+  m_LocalPosition: {x: 20, y: 99.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 265776084}
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_MaxLoadedChunks: 10
   m_GoalChunk:
   - {fileID: 114660226855780604, guid: 294cf3094c15a1c43ad3e6c11e3c675a, type: 2}
-  m_DistanceToGoal: 100
+  m_DistanceToGoal: 2500
 --- !u!1 &578552053
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,15 +829,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954701613}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -338.5, y: -225, z: 0}
+  m_LocalPosition: {x: -216.5, y: 86.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 265776084}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 97, y: 20}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 97, y: -30}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &954701615
@@ -920,7 +920,6 @@ GameObject:
   - component: {fileID: 1216949939}
   - component: {fileID: 1216949938}
   - component: {fileID: 1216949945}
-  - component: {fileID: 1216949940}
   - component: {fileID: 1216949941}
   m_Layer: 0
   m_Name: Spaceship
@@ -959,20 +958,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1216949940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1216949937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c856e25afd7ca849b14d85a867bfab6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ObstacleToLaunch: {fileID: 4449530600397640, guid: ffa0187d58174714d88ecc7b464a4c5f,
-    type: 2}
-  m_InstantiatedObjects: {fileID: 769177010}
 --- !u!114 &1216949941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,6 +1137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HealthDisplay: {fileID: 464927079}
+  m_TimerDisplay: {fileID: 954701615}
 --- !u!1 &1547447995
 GameObject:
   m_ObjectHideFlags: 0
