@@ -93,7 +93,7 @@ namespace E4lime.LudumDare.Ld40 {
 		}
 
 		private void ShowHighscore() {
-		
+			PlayAudioManager.PlayGoal();
 		}
 
 		public void PlayerReachedGoal() {
@@ -144,7 +144,8 @@ namespace E4lime.LudumDare.Ld40 {
 
 			m_InfiniteLevelManager.PauseProcess = true;
 			m_ObjectSpawner.PauseProcess = true;
-			SceneManager.LoadScene(0);
+			PlayAudioManager.PlayGameover();
+			//SceneManager.LoadScene(0);
 			Destroy(this.m_SpaceShipBehaviour.gameObject);
 		}
 	}

@@ -33,7 +33,7 @@ namespace E4lime.LudumDare.Ld40 {
 	
 	
 
-		void Awake() {
+		void Start() {
 			INSTANCE = this;
 			m_Source = FindObjectOfType<AudioSource>();
 		}

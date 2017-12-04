@@ -29,6 +29,11 @@ namespace E4lime.LudumDare.Ld40.Level {
 
 		private void HitPlayer(SpaceShipBehaviour player) {
 			Health playerHealth = player.GetComponent<Health>();
+			if (m_HealthToAddOnHit.HealthValue > 0) {
+				PlayAudioManager.PlayHitIncrease();
+			} else {
+				PlayAudioManager.PlayHitDecrease();
+			}
 			playerHealth.HealthValue += m_HealthToAddOnHit.HealthValue;
 			Destroy(this.gameObject);
 		}
