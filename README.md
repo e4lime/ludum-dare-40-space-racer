@@ -127,12 +127,12 @@ Optional
 - Highscore with http://dreamlo.com
 
 ### DOTween
-(Included in repository)
-An Animation and tweening library. 
-Version: 1.1.640
+(Included in repository)  
+An Animation and tweening library.  
+Version: 1.1.640  
 Free: https://www.assetstore.unity3d.com/en/#!/content/27676     
-* Demigiant/DOTween
-* Resources/DOTweenSettings.asset
+* Demigiant/DOTween  
+* Resources/DOTweenSettings.asset  
 
 ### Dreamlo
 An online high score/leader board.  
