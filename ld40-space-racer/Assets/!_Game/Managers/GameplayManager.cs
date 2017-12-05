@@ -96,7 +96,6 @@ namespace E4lime.LudumDare.Ld40 {
 
 		private void ShowHighscore() {
 			m_GUIManager.ShowSubmitScore();
-			m_GUIManager.ShowHighscore();
 			PlayAudioManager.PlayGoal();
 		}
 
@@ -135,8 +134,10 @@ namespace E4lime.LudumDare.Ld40 {
 			}
 		}
 
+		private float lastKnownShipZ = 0f;
 		public float DistanceTravelled() {
-			return m_SpaceShipBehaviourTransform.position.z - m_SpaceShipStartLocation.z;
+			if (m_SpaceShipBehaviourTransform != null) lastKnownShipZ = m_SpaceShipBehaviourTransform.position.z;
+			return lastKnownShipZ - m_SpaceShipStartLocation.z;
 		}
 
 		private void AdjustDifficulty() {

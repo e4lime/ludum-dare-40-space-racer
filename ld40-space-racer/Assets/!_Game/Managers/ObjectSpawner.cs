@@ -127,6 +127,8 @@ namespace E4lime.LudumDare.Ld40.Level {
 			m_LastSpawnedPosition = spawnPos;
 		}
 
-		
+		public float GetSpawnDistanceFromShip() {
+			return m_SpawnDistanceFromShip;
+		}
 	}
 }

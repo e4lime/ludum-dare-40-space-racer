@@ -88,5 +88,9 @@ namespace E4lime.LudumDare.Ld40.InfiniteLevel {
 			return new Vector3(m_Transform.position.x, m_Transform.position.y, m_NextChunkPositionZ);
 		}
 
+		public float GetDistanceToGoal() {
+			return m_DistanceToGoal;
+		}
+
 	}
 }
