@@ -52,7 +52,7 @@ Easy:
 - [x] ship horizontal movement, left moves left a lane and vice versa
 - [x] health
 
-- [ ] main menu
+- [x] main menu
 - [x] obstacles
 - [x] obstacle spawner
 - [x] health objects
@@ -61,12 +61,12 @@ Easy:
 - [x] Camera follow ship
 
 ### Optional
-- [ ] online highscore
+- [x] online highscore
 
 ### Sounds
-- [ ] Hit decrease obstacle
-- [ ] Hit increase obstacle
-- [ ] Goal
+- [x] Hit decrease obstacle
+- [x] Hit increase obstacle
+- [x] Goal
 
 
 ### Skip
@@ -90,9 +90,9 @@ Optional
 #### Per Team 
 - [x] Change /unity-project-folder/ name
 - [x] Decide folder structure (!_Game_ByAssetType vs !_Game_ByEntity) Rename to !_Game, delete unwanted one   
-- [ ] Decide what thirdparty libraries to use      
-- [ ] Update .gitignore in /unity-project-folder/ to include or exlude third party libraries. Prefix with ! to flip folders
-- [ ] Don't commit PAID libraries if going open source     
+- [x] Decide what thirdparty libraries to use      
+- [x] Update .gitignore in /unity-project-folder/ to include or exlude third party libraries. Prefix with ! to flip folders
+- [x] Don't commit PAID libraries if going open source     
 - [x] Set Company name in "Project Settings > Player Settings" to team name   
 - [x] Set Product name in "Project Settings > Player Settings" to project name   
 - [x] Decide Time Settings (Default timestep is 0.02, project is set to 0.04)    
@@ -103,13 +103,13 @@ Optional
 
 #### Per Team Before Final build
 - [ ] Backup project     
-- [ ] Set final Company name in "Project Settings > Player Settings"     
-- [ ] Set final Product name in "Project Settings > Player Settings"      
-- [ ] Remove paid tools      
-- [ ] Double check paid tools from commit history if going public    
-- [ ] Remove placeholders       
-- [ ] Add Unity version used to the readme
-- [ ] Add Third party tools versions to the readme
+- [x] Set final Company name in "Project Settings > Player Settings"     
+- [x] Set final Product name in "Project Settings > Player Settings"      
+- [x] Remove paid tools      
+- [x] Double check paid tools from commit history if going public    
+- [x] Remove placeholders       
+- [x] Add Unity version used to the readme
+- [x] Add Third party tools versions to the readme
 - [ ] WebGL: Remove exceptions handling
 
 ### Optimization Checklist
@@ -122,51 +122,20 @@ Optional
 --------
 
 ## List of Thirdparty Libraries and tools
-TODO: Remove unused 
-
-### DOTween Pro
-An Animation and tweening library.   
-PAID  
-https://www.assetstore.unity3d.com/en/#!/content/32416   
-Or Use the Free version (below)  
-
-* Demigiant/DOTweenPro
-* Resources/DOTweenSettings.asset
+- Unity 2017.2
+- DoTween 1.1.640 (included in repository)
+- Highscore with http://dreamlo.com
 
 ### DOTween
+(Included in repository)  
 An Animation and tweening library.  
-Free   
-https://www.assetstore.unity3d.com/en/#!/content/27676    
-Or use the paid version (above)  
+Version: 1.1.640  
+Free: https://www.assetstore.unity3d.com/en/#!/content/27676     
+* Demigiant/DOTween  
+* Resources/DOTweenSettings.asset  
 
-* Demigiant/DOTween
-* Resources/DOTweenSettings.asset
-
-### ProBuilder Basic
-3D Level tool.   
-Free    
-https://www.assetstore.unity3d.com/en/#!/content/11919    
-
-* ProCore/ProBuilder
-
-
-### Unity Toolbag
-Scripting Tools   
-Free   
-https://github.com/nickgravelyn/UnityToolbag     
-Omitted: SimpleSpriteAnimation, SortingLayer, SyncSolution    
- 
-* UnityToolbag-master/CacheBehaviour
-* UnityToolbag-master/Dispatcher
-* UnityToolbag-master/Future
-* UnityToolbag-master/SnapToSurface
-* UnityToolbag-master/StandardPaths
-* UnityToolbag-master/UnityConstants
-
-###  Consolation
-View console ingame    
-Free    
-https://github.com/mminer/consolation    
-
-* consolation-master/
-
+### Dreamlo
+An online high score/leader board.  
+Free: http://dreamlo.com  
+The private and public key isn't included in the repository.   
+You have to add your own, see [example file](Templates/HighScoreCodes_EXAMPLE.cs).  
