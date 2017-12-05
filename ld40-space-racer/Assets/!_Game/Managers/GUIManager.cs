@@ -41,7 +41,8 @@ namespace E4lime.LudumDare.Ld40.GUI {
 		private InfiniteLevelManager m_InfiniteLevelManager;
 
 		void Awake() {
-			m_PlayerHealth = FindObjectOfType<SpaceShipBehaviour>().GetComponent<Health>();
+			SpaceShipBehaviour spaceship = FindObjectOfType<SpaceShipBehaviour>();
+			if (spaceship != null) m_PlayerHealth = spaceship.GetComponent<Health>();
 			m_GameplayManager = FindObjectOfType<GameplayManager>();
 			m_InfiniteLevelManager = FindObjectOfType<InfiniteLevelManager>();
 		}
