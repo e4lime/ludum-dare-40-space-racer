@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace E4lime.LudumDare.Ld40.GUI {
 	public class Buttons : MonoBehaviour {
@@ -19,8 +20,8 @@ namespace E4lime.LudumDare.Ld40.GUI {
 		}
 
 		public void OnStartGame() {
-			Debug.Log("Starting");
 			SceneManager.LoadScene(1);
 		}
+
 	}
 }

@@ -1,7 +1,13 @@
 # Space-Racer
 
 ## Summary
-Space Racer! The more points you get the harder it gets.
+Brick Racer!
+Reach the end of the race track as fast as possible without dying. The more health you have the slower your speed will be. Hit gray blocks to lose health and hit green ones to gain health. 
+In order to gain a good time, you need to keep your health as low as possible without dying.
+
+A: Move left
+D: Move right
+M: Mute sound
 
 v2:
 The more health you have the slower you move, lower the faster. 

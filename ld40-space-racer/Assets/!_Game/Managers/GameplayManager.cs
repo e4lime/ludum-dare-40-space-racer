@@ -8,6 +8,7 @@ using E4lime.LudumDare.Ld40.InfiniteLevel;
 using E4lime.LudumDare.Ld40.Level;
 using UnityEngine.SceneManagement;
 using System;
+using E4lime.LudumDare.Ld40.GUI;
 
 namespace E4lime.LudumDare.Ld40 {
 	public class GameplayManager : MonoBehaviour {
@@ -29,6 +30,7 @@ namespace E4lime.LudumDare.Ld40 {
 		private InfiniteLevelManager m_InfiniteLevelManager;
 		private ObjectSpawner m_ObjectSpawner;
 		private State m_State;
+		private GUIManager m_GUIManager;
 
 		private Vector3 m_SpaceShipStartLocation;
 		private bool m_PlayerReachedGoal = false;
@@ -93,6 +95,8 @@ namespace E4lime.LudumDare.Ld40 {
 		}
 
 		private void ShowHighscore() {
+			m_GUIManager.ShowSubmitScore();
+			m_GUIManager.ShowHighscore();
 			PlayAudioManager.PlayGoal();
 		}
 
@@ -106,7 +110,7 @@ namespace E4lime.LudumDare.Ld40 {
 			m_SpaceShipBehaviourTransform = m_SpaceShipBehaviour.transform;
 			m_InfiniteLevelManager = FindObjectOfType<InfiniteLevelManager>();
 			m_ObjectSpawner = FindObjectOfType<ObjectSpawner>();
-
+			m_GUIManager = FindObjectOfType<GUIManager>();
 			m_State = State.Running;
 		}
 
@@ -145,6 +149,7 @@ namespace E4lime.LudumDare.Ld40 {
 			m_InfiniteLevelManager.PauseProcess = true;
 			m_ObjectSpawner.PauseProcess = true;
 			PlayAudioManager.PlayGameover();
+			m_GUIManager.ShowHighscore();
 			//SceneManager.LoadScene(0);
 			Destroy(this.m_SpaceShipBehaviour.gameObject);
 		}

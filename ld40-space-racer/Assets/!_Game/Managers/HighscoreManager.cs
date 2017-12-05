@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 namespace E4lime.LudumDare.Ld40 {
 
 	
@@ -7,20 +9,18 @@ namespace E4lime.LudumDare.Ld40 {
 
 		public Highscore[] highscoresList;
 		private static HighscoreManager INSTANCE;
-
+		
+		
 		private void Awake() {
 			INSTANCE = this;
 		}
 
-		private void Start() {
-			DownloadHighscores();
-		}
-		public static void AddNewHighscore(string username, int score) {
-			INSTANCE.StartCoroutine(_UploadNewHighscore(username, score));
+		public static void AddNewTime(string username, int time) {
+			INSTANCE.StartCoroutine(_UploadNewHighscore(username, time));
 		}
 
-		public static void DownloadHighscores() {
-			INSTANCE.StartCoroutine(_DownloadHighscoresFromDatabase());
+		public static void DownloadHighscores(Text displayHere) {
+			INSTANCE.StartCoroutine(_DownloadHighscoresFromDatabase(displayHere));
 		}
 
 		private static IEnumerator _UploadNewHighscore(string username, int score) {
@@ -29,18 +29,15 @@ namespace E4lime.LudumDare.Ld40 {
 
 		}
 
-		private static IEnumerator _DownloadHighscoresFromDatabase() {
+		private static IEnumerator _DownloadHighscoresFromDatabase(Text displayHere) {
 			WWW www = new WWW(HighscoreCodes.webURL + HighscoreCodes.publicCode + "/pipe/");
 			yield return www;
 			if (string.IsNullOrEmpty(www.error))
-				foreach (string s in FormatHighscores(www.text))
-					Debug.Log(s);
-			else {
-				Debug.Log("Error Downloading: " + www.error);
-			}
+				FormatHighscores(www.text, displayHere);
+		
 		}
 
-		private static string[] FormatHighscores(string textStream) {
+		private static string[] FormatHighscores(string textStream, Text displayHere) {
 			string[] entries = textStream.Split(new char[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
 			INSTANCE.highscoresList = new Highscore[entries.Length];
 			string[] output = new string[entries.Length];
@@ -51,8 +48,14 @@ namespace E4lime.LudumDare.Ld40 {
 				INSTANCE.highscoresList[i] = new Highscore(username, score);
 			}
 
+			displayHere.text = "Online Highscore\n\n";
+
 			for (int i = 0; i < output.Length; i++) {
 				output[i] = INSTANCE.highscoresList[i].username + ": " + INSTANCE.highscoresList[i].score;
+			}
+
+			for (int i = 0; i < output.Length; i++) {
+				displayHere.text += i+1 + ") " + output[i] +"\n";
 			}
 			return output;
 		}
