@@ -1,9 +1,9 @@
-# Space-Racer
-
+# ~~Space-Racer~~
+# Brick Racer
 ## Summary
 Brick Racer!
 Reach the end of the race track as fast as possible without dying. The more health you have the slower your speed will be. Hit gray blocks to lose health and hit green ones to gain health. 
-In order to gain a good time, you need to keep your health as low as possible without dying.
+In order to get a good time, you need to keep your health as low as possible without dying.
 
 A: Move left
 D: Move right
