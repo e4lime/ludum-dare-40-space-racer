@@ -115,7 +115,7 @@ namespace E4lime.LudumDare.Ld40 {
 
 		private void Start() {
 			m_SpaceShipStartLocation = m_SpaceShipBehaviour.transform.position;
-			TimeTaken = 990f;
+			TimeTaken = 0f;
 		}
 
 		void Update() {
