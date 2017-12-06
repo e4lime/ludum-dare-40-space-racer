@@ -15,8 +15,10 @@ namespace E4lime.LudumDare.Ld40 {
 			INSTANCE = this;
 		}
 
-		public static void AddNewTime(string username, int time) {
-			int fixedtime = int.MaxValue - time;
+		public static void AddNewTime(string username, float time) {
+			print(time);
+			//int fixedtime = int.MaxValue - (int)(time * 1000);
+			int fixedtime = int.MaxValue - (int)(time * 1000);
 			INSTANCE.StartCoroutine(_UploadNewHighscore(username, fixedtime));
 		}
 
@@ -49,13 +51,13 @@ namespace E4lime.LudumDare.Ld40 {
 				INSTANCE.highscoresList[i] = new Highscore(username, score);
 			}
 
-			displayHere.text = "Online Highscore (in seconds) \n\n";
+			displayHere.text = "Highscore (in seconds) \n\n";
 
 			for (int i = 0; i < output.Length; i++) {
-				output[i] = INSTANCE.highscoresList[i].username + ": " + (int.MaxValue - INSTANCE.highscoresList[i].score) + " s";
+				output[i] = INSTANCE.highscoresList[i].username + ": " + ((int.MaxValue - INSTANCE.highscoresList[i].score) / 1000.0) + " s";
 			}
 			int rank = 1;
-			for (int i = output.Length-1; i >= 0; i--) {
+			for (int i = 0; i < output.Length; ++i) {
 				displayHere.text += rank + ") " + output[i] +"\n";
 				rank++;
 			}

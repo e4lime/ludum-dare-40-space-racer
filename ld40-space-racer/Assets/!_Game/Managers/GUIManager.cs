@@ -98,10 +98,10 @@ namespace E4lime.LudumDare.Ld40.GUI {
 		public void OnSubmitHighscore() {
 			string trimmed = m_SubmitHighscoreNameField.text.Trim();
 			if (trimmed == "") return;
-			SubmitHighscore(trimmed, (int)m_GameplayManager.TimeTaken);
+			SubmitHighscore(trimmed, m_GameplayManager.TimeTaken);
 		}
 
-		private void SubmitHighscore(string name, int time) {
+		private void SubmitHighscore(string name, float time) {
 			HighscoreManager.AddNewTime(name, time);
 			m_SubmitHighscoreGUI.SetActive(false);
 			m_RefreshListButton.gameObject.SetActive(true);

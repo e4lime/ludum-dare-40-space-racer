@@ -115,12 +115,13 @@ namespace E4lime.LudumDare.Ld40 {
 
 		private void Start() {
 			m_SpaceShipStartLocation = m_SpaceShipBehaviour.transform.position;
-			TimeTaken = 0;
+			TimeTaken = 990f;
 		}
 
 		void Update() {
 			if (CurrentState == State.Running) {
 				TimeTaken += Time.deltaTime;
+				TimeTaken = Mathf.Min(TimeTaken, 999.999f);
 
 				if (m_PlayerReachedGoal) {
 					CurrentState = State.EndScreen;
