@@ -214,6 +214,16 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1541587539}
+    - target: {fileID: 224002105522518714, guid: defd91bd7e772a44b9138a0e873e10dc,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -91.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224002105522518714, guid: defd91bd7e772a44b9138a0e873e10dc,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: defd91bd7e772a44b9138a0e873e10dc, type: 2}
   m_IsPrefabParent: 0
@@ -1174,7 +1184,7 @@ MonoBehaviour:
   m_MaxLoadedChunks: 10
   m_GoalChunk:
   - {fileID: 114660226855780604, guid: 294cf3094c15a1c43ad3e6c11e3c675a, type: 2}
-  m_DistanceToGoal: 1500
+  m_DistanceToGoal: 2200
 --- !u!1 &578552053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,7 +1253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e249de9958ba1b499f99c50274c32d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SpaceShipMaximumSpeed: 95
+  m_SpaceShipMaximumSpeed: 100
   m_SpaceShipMinimumSpeed: 10
 --- !u!1 &619805698
 GameObject:
