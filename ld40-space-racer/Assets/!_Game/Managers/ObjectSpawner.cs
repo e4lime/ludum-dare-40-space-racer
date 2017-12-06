@@ -88,7 +88,7 @@ namespace E4lime.LudumDare.Ld40.Level {
 				if (m_SpawnsSinceLastIncrease >= m_MinDecreaseObstaclesBeforeIncrease && m_NextHealthSpawn == -1) {
 					m_NextHealthSpawn = Random.Range(m_SpawnIncreaseHealthRandomRangeStart, m_SpawnIncreaseHealthRandomRangEnd);
 				}
-				else if ( m_NextHealthSpawn != -1 && m_SpawnsSinceLastIncrease == m_MinDecreaseObstaclesBeforeIncrease + m_NextHealthSpawn) {
+				else if ( m_NextHealthSpawn != -1 && m_SpawnsSinceLastIncrease >= m_MinDecreaseObstaclesBeforeIncrease + m_NextHealthSpawn) {
 					Spawn(m_IncreaseHealthObstacle, spawnDistanceFromShip);
 					m_SpawnsSinceLastIncrease = 0;
 					m_NextHealthSpawn = -1;
