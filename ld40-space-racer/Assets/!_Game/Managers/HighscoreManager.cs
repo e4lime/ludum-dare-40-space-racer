@@ -16,8 +16,6 @@ namespace E4lime.LudumDare.Ld40 {
 		}
 
 		public static void AddNewTime(string username, float time) {
-			print(time);
-			//int fixedtime = int.MaxValue - (int)(time * 1000);
 			int fixedtime = int.MaxValue - (int)(time * 1000);
 			INSTANCE.StartCoroutine(_UploadNewHighscore(username, fixedtime));
 		}
