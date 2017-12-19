@@ -3,7 +3,7 @@
 ## Summary
 Game made for Ludum Dare 40 Jam. Theme: "The more you have, the worse it is"
 
-Game page: https://ldjam.com/events/ludum-dare/40/brick-racer  
+ldjam: https://ldjam.com/events/ludum-dare/40/brick-racer  
 Gameplay: https://www.youtube.com/watch?v=EoBphxAYUcQ
 
 Brick Racer!
