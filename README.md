@@ -1,6 +1,11 @@
 # ~~Space-Racer~~
 # Brick Racer
 ## Summary
+Game made for Ludum Dare 40 Jam. Theme: "The more you have, the worse it is"
+
+https://ldjam.com/events/ludum-dare/40/brick-racer
+https://www.youtube.com/watch?v=EoBphxAYUcQ
+
 Brick Racer!
 Reach the end of the race track as fast as possible without dying. The more health you have the slower your speed will be. Hit gray blocks to lose health and hit green ones to gain health. 
 In order to get a good time, you need to keep your health as low as possible without dying.
